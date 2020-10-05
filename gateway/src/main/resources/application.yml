@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /school
+    application-display-name: School
+
+logging:
+  level:
+    web: info
+
+proxy:
+  host: localhost
+  port: 8082
+

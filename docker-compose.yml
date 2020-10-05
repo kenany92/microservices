@@ -1,0 +1,31 @@
+version: "3.3"
+# networks:
+#   mynetwork:
+#     ipam:
+#       config:
+#         - subnet: 172.20.0.0/24
+services:
+    school_gateway:
+        container_name: gateway
+        build:
+          context: ./gateway
+          # dockerfile: Dockerfile
+        ports:
+            - "8080:8080"
+        networks:
+          test_net:
+            ipv4_address: 172.40.1.3
+    school_user:
+        container_name: user-man
+        build: usermanagement/.
+        ports:
+            - "8082:8081"
+        networks:
+          test_net:
+            ipv4_address: 172.40.1.2
+
+networks:
+  test_net:
+    ipam:
+        config:
+            - subnet: "172.40.1.0/16"
