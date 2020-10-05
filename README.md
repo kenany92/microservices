@@ -3,7 +3,7 @@ Microservices (Spring boot + Docker / Docker Compose + Feign + Gradle)
 
 Just a simple microservices project with two services which communicate through feign deployed in two docker containers
 
-* BUILD USER MANAGEMENT
+** BUILD USER MANAGEMENT
 
 # cd usermanagement
 # ./gradlew bootJar
